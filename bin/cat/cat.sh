@@ -1,5 +1,9 @@
 #!/bin/sh
-while getopts "benstuv" arg
+
+# -u is still accepted but does nothing as _cat does by default unbuffered
+# writes to output
+
+while getopts "bnsuv" arg
 do
 	case $arg in
 	b) B=1 ;;
