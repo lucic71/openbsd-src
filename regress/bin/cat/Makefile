@@ -1,17 +1,17 @@
 # $OpenBSD: Makefile,v 1.1 2016/07/05 20:01:47 schwarze Exp $
 
-REGRESS_TARGETS=cat_be cat_ne cat_se cat_t
+REGRESS_TARGETS=cat_b cat_n cat_s cat_v
 
-cat_be:
-	cat -be ${.CURDIR}/cat_be.in | cmp -s ${.CURDIR}/cat_be.out /dev/stdin
+cat_b:
+	cat -b ${.CURDIR}/cat_b.in | cmp -s ${.CURDIR}/cat_b.out /dev/stdin
 
-cat_ne:
-	cat -ne ${.CURDIR}/cat_ne.in | cmp -s ${.CURDIR}/cat_ne.out /dev/stdin
+cat_n:
+	cat -n ${.CURDIR}/cat_n.in | cmp -s ${.CURDIR}/cat_n.out /dev/stdin
 
-cat_se:
-	cat -se ${.CURDIR}/cat_se.in | cmp -s ${.CURDIR}/cat_se.out /dev/stdin
+cat_s:
+	cat -s ${.CURDIR}/cat_s.in | cmp -s ${.CURDIR}/cat_s.out /dev/stdin
 
-cat_t:
-	cat -t ${.CURDIR}/cat_t.in | cmp -s ${.CURDIR}/cat_t.out /dev/stdin
+cat_v:
+	cat -v ${.CURDIR}/cat_v.in | cmp -s ${.CURDIR}/cat_v.out /dev/stdin
 
 .include <bsd.regress.mk>

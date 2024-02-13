@@ -62,38 +62,18 @@ The options are as follows:
 .Bl -tag -width Ds
 .It Fl b
 Number the lines, but don't count blank lines.
-.It Fl e
-Print a dollar sign
-.Pq Ql \&$
-at the end of each line.
-Implies the
-.Fl v
-option to display non-printing characters.
 .It Fl n
 Number the output lines, starting at 1.
 .It Fl s
 Squeeze multiple adjacent empty lines, causing the output to be
 single spaced.
-.It Fl t
-Print tab characters as
-.Ql ^I .
-Implies the
-.Fl v
-option to display non-printing characters.
 .It Fl u
 The output is guaranteed to be unbuffered (see
 .Xr setvbuf 3 ) .
 .It Fl v
-Displays non-printing characters so they are visible.
-Control characters print as
-.Ql ^X
-for control-X, with the exception of the tab and EOL characters,
-which are displayed normally.
-The DEL character (octal 0177) prints as
-.Ql ^? .
-Non-ASCII characters (with the high bit set) are printed as
-.Ql M-
-(for meta) followed by the character for the low 7 bits.
+Displays non-printing characters so they are visible
+(see 
+.Xr sed 1 ) .
 .El
 .Sh EXIT STATUS
 .Ex -std cat
@@ -161,7 +141,7 @@ utility is compliant with the
 specification.
 .Pp
 The flags
-.Op Fl benstv
+.Op Fl bnsv
 are extensions to that specification.
 .Sh HISTORY
 A
